@@ -16,6 +16,7 @@ namespace CoreApplication
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -26,15 +27,77 @@ namespace CoreApplication
                 app.UseDeveloperExceptionPage();
             }
 
+            //app.Use(async (context,next) =>
+            //{
+            //    await context.Response.WriteAsync("Hello from my First middleware");
+            //    await next();
+            //    await context.Response.WriteAsync("Hello from my First middleware Response");
+            //});
+
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("Hello from my Second middleware");
+            //    await next();
+            //    await context.Response.WriteAsync("Hello from my Second middleware Response");
+            //});
+
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("Hello from my Third middleware");
+            //    await next();
+            //});
+            
             app.UseRouting();
+
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapGet("/", async context =>
+            //    {
+            //        if (env.IsDevelopment())
+            //        {
+            //            await context.Response.WriteAsync("Hello from Development");
+            //        }
+            //        else if (env.IsProduction())
+            //        {
+            //            await context.Response.WriteAsync("Hello from Production");
+            //        }
+            //        else if (env.IsStaging())
+            //        {
+            //            await context.Response.WriteAsync("Hello from Staging");
+            //        }
+            //        else if (env.IsEnvironment("Develop"))
+            //        {
+            //            await context.Response.WriteAsync("Hello from Develop");
+            //        }
+            //        else if (env.IsEnvironment("Prod"))
+            //        {
+            //            await context.Response.WriteAsync("Hello from Prod");
+            //        }
+            //        else 
+            //            await context.Response.WriteAsync(env.EnvironmentName);
+            //    });
+            //});
+
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapGet("/", async context =>
+            //    {
+            //        await context.Response.WriteAsync("Hello World!");
+            //    });
+            //});
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                endpoints.MapDefaultControllerRoute();             
             });
+
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapGet("/Praveen", async context =>
+            //    {
+            //        await context.Response.WriteAsync("Hello Praveen!");
+            //    });
+            //});
         }
     }
 }
