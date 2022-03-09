@@ -8,9 +8,22 @@ namespace CoreApplication.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index()
+        public ViewResult Index()
         {
-            return "Home Page";
+            //var obj = new { Id = 1, Name = "Name 1" };
+            //return View("AboutUs",obj);
+            return View();
         }
+
+        public ViewResult AboutUs()
+        {
+            return View();
+        }
+
+        public ViewResult ContactUs()
+        {
+            return View();
+        }
+
     }
 }
