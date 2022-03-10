@@ -20,7 +20,7 @@ namespace CoreApplication.Controllers
         public ViewResult GetAll()
         {
             var data = _oneRepository.GetAll();
-            return View();
+            return View(data);
         }
 
         public OneModel GetOne(int id)

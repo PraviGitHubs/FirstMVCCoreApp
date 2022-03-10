@@ -26,11 +26,13 @@ namespace CoreApplication.Repository
         {
             return new List<OneModel>()
             { 
-                new OneModel() { Id = 1 , Name = "Name 1" , Author = "Author 1"},
-                new OneModel() { Id = 2 , Name = "Name 2" , Author = "Author 2"},
-                new OneModel() { Id = 3 , Name = "Name 3" , Author = "Author 3"},
-                new OneModel() { Id = 4 , Name = "Name 4" , Author = "Author 4"},
-                new OneModel() { Id = 5 , Name = "Name 5" , Author = "Author 5"}
+                new OneModel() { Id = 1 , Name = "Name 1" , Author = "Author 1" , Description="Thisis the description for 1"},
+                new OneModel() { Id = 2 , Name = "Name 2" , Author = "Author 2" , Description="Thisis the description for 2"},
+                new OneModel() { Id = 3 , Name = "Name 3" , Author = "Author 3" , Description="Thisis the description for 3"},
+                new OneModel() { Id = 4 , Name = "Name 4" , Author = "Author 4" , Description="Thisis the description for 4"},
+                new OneModel() { Id = 5 , Name = "Name 5" , Author = "Author 5", Description="Thisis the description for 5"},
+                new OneModel() { Id = 5 , Name = "Name 6" , Author = "Author 6", Description="Thisis the description for 6"},
+                new OneModel() { Id = 5 , Name = "Name 7" , Author = "Author 7", Description="Thisis the description for 7"},
             };
         }
     }
